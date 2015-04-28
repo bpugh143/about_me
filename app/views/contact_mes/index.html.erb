@@ -1,0 +1,25 @@
+<h1>Listing contact_mes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contact_mes.each do |contact_me| %>
+      <tr>
+        <td><%= link_to 'Show', contact_me %></td>
+        <td><%= link_to 'Edit', edit_contact_me_path(contact_me) %></td>
+        <td><%= link_to 'Destroy', contact_me, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contact me', new_contact_me_path %>
